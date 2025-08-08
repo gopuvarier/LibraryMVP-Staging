@@ -28,7 +28,7 @@ STUDENTS_SHEET = "Students"
 TX_SHEET = "Transactions"
 
 
-@st.experimental_memo(ttl=30)
+@st.cache_data(ttl=30)
 def open_sheet():
     return gc.open_by_url(SHEET_URL)
 
